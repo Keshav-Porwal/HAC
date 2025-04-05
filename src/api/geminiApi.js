@@ -2,13 +2,13 @@
 // This file handles all interactions with the Google Gemini API
 
 // Replace with your API key when deploying
-const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY";
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
 
 // Function to get ingredient suggestions based on what the user is baking
 export const getIngredientSuggestions = async (bakingItem) => {
   try {
     // For development, return mock data
-    if (!GEMINI_API_KEY || GEMINI_API_KEY === "YOUR_GEMINI_API_KEY") {
+    if (!GEMINI_API_KEY || GEMINI_API_KEY === process.env.GEMINI_API_KEY || "") {
       console.log("Using mock data - no API key provided");
       return getMockIngredients(bakingItem);
     }

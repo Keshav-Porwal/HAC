@@ -5,8 +5,6 @@
 
 Bake Mate is a full-stack web application designed specifically for bakers, offering intelligent tools for recipe management and ingredient handling.
 
-**URL**: https://lovable.dev/projects/e2cc8ccf-96ea-4906-a28f-bc786aefe326
-
 ## Features
 
 - **Smart Ingredient Conversion**: Convert between various baking units (grams, cups, tablespoons, etc.)
@@ -34,13 +32,13 @@ Bake Mate is a full-stack web application designed specifically for bakers, offe
 
 ### Frontend Development
 
-```sh
+
 # Install dependencies
 npm i
 
 # Start the development server
 npm run dev
-```
+
 
 ### API Keys Required
 

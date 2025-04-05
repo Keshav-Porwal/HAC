@@ -1,9 +1,10 @@
 
 const express = require('express');
 const router = express.Router();
+require('dotenv').config();
 
 // Replace with your Gemini API key
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "YOUR_GEMINI_API_KEY";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 
 /**
  * Endpoint to get ingredient suggestions
