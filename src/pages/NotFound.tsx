@@ -1,3 +1,4 @@
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -12,14 +13,30 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
-      </div>
+    <div style={{ minHeight: '70vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
+      <h1 style={{ fontSize: '3rem', color: 'var(--babyPink)', marginBottom: '1rem' }}>404</h1>
+      <p style={{ fontSize: '1.5rem', color: 'var(--lavender)', marginBottom: '2rem' }}>
+        Oops! We couldn't find the page you're looking for.
+      </p>
+      <p style={{ color: 'white', marginBottom: '2rem', textAlign: 'center', maxWidth: '500px' }}>
+        Maybe the recipe you're looking for has been moved or doesn't exist.
+      </p>
+      <a 
+        href="/" 
+        style={{
+          backgroundColor: 'var(--babyPink)',
+          color: '#333',
+          padding: '0.75rem 1.5rem',
+          borderRadius: '8px',
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
+        onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+      >
+        Back to Home
+      </a>
     </div>
   );
 };

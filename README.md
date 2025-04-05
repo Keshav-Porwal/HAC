@@ -1,73 +1,76 @@
-# Welcome to your Lovable project
 
-## Project info
+# Bake Mate - Smart Baking Assistant
+
+## Project Overview
+
+Bake Mate is a full-stack web application designed specifically for bakers, offering intelligent tools for recipe management and ingredient handling.
 
 **URL**: https://lovable.dev/projects/e2cc8ccf-96ea-4906-a28f-bc786aefe326
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Smart Ingredient Conversion**: Convert between various baking units (grams, cups, tablespoons, etc.)
+- **AI-Powered Baking Tips**: Get professional tips for working with specific ingredients
+- **Ingredient Substitution Suggestions**: Find alternatives when you're missing an ingredient
+- **Recipe Scaling**: Easily adjust serving sizes while maintaining proportions
+- **Mobile-Friendly Design**: Bake on any device with a responsive interface
 
-**Use Lovable**
+## Technical Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e2cc8ccf-96ea-4906-a28f-bc786aefe326) and start prompting.
+- **Frontend**: 
+  - React (Vite)
+  - HTML/CSS for styling
+  - Google Fonts (Poppins, Montserrat)
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Backend**: 
+  - Express.js
+  - Node.js
+  - MongoDB for data storage
 
-**Use your preferred IDE**
+- **AI Integration**:
+  - Google Gemini API for baking tips and suggestions
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Setup Instructions
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Frontend Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+# Install dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### API Keys Required
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+For full functionality, you'll need to add:
 
-**Use GitHub Codespaces**
+1. Your MongoDB URI in `server/index.js`
+2. Your Google Gemini API key in `server/routes/aiRoutes.js` and `src/api/geminiApi.js`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+- `/src` - Frontend React application
+  - `/components` - React components
+  - `/api` - API client for Gemini integration
+  - `/utils` - Utility functions (conversions, formatting)
+- `/server` - Backend Express application
+  - `/routes` - API endpoints
+  - `/models` - MongoDB schemas
 
-This project is built with:
+## How to Use
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Enter what you're baking to get suggested ingredients
+2. Add ingredients with quantities and units you want to convert
+3. View converted measurements, AI tips, and substitution ideas
+4. Adjust serving size to scale all ingredients proportionally
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/e2cc8ccf-96ea-4906-a28f-bc786aefe326) and click on Share -> Publish.
+This project is open-source, feel free to use and modify it.
 
-## Can I connect a custom domain to my Lovable project?
+## Acknowledgements
 
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Conversion formulas are based on standard baking equivalents
+- Gemini API for providing baking expertise
