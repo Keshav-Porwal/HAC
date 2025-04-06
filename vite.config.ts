@@ -15,7 +15,8 @@ export default defineConfig(({ mode }) => ({
         changeOrigin: true,
         secure: false,
       }
-    }
+    },
+    allowedHosts: ['hac-jpd9.onrender.com'],
   },
   plugins: [
     react(),
